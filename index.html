@@ -9,7 +9,7 @@
 <body>
     <script>
         var xmlhttp = new XMLHttpRequest();
-        smlhttp.onreadystatechange = function(){
+        xmlhttp.onreadystatechange = function(){
             if(this.readystate == 4 && this.status == 200){
                 var mydata = JSON.parse(this.responseText);
                 window.alert(mydata.name);
