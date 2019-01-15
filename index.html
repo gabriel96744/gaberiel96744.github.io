@@ -12,12 +12,12 @@
         xmlhttp.onreadystatechange = function(){
             if(this.readystate == 4 && this.status == 200){
                 var mydata = JSON.parse(this.responseText);
-                window.alert(mydata.name);
+                window.alert(sample2.jason[1].ingredients[3]);
 
 
             }
         };
-        xmlhttp.open("GET","sample.json",true);
+        xmlhttp.open("GET","sample2.json",true);
         xmlhttp.send();
     </script>
 </body>
