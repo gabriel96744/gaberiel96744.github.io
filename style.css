@@ -4,6 +4,7 @@ body{
      background-repeat: no-repeat;
 }
 #room1{
+     position:fixed;
      color:black;
      padding:10px;
      border-width: 1px;
@@ -34,6 +35,7 @@ body{
      font-weight: bold;
      font-size: 25px;
 }#room2{
+     position:fixed;
      color:black;
      padding:15px;
      border-width: 1px;
@@ -62,6 +64,7 @@ body{
      font-weight: bold;
      font-size: 25px;}
      #room3{
+          position:fixed;
           color:black;
           padding:15px;
           border-width: 1px;
@@ -77,6 +80,7 @@ body{
           font-size: 25px;
      }
      #room4{
+          position:fixed;
           color:black;
           padding:15px;
           border-width: 1px;
@@ -92,6 +96,7 @@ body{
           font-size: 25px;
      }
      #room5{
+          position:fixed;
           color:black;
           padding:15px;
           border-width: 1px;
@@ -107,6 +112,7 @@ body{
           font-size: 25px;
      }
      #room6{
+          position:fixed;
           color:black;
           padding:15px;
           border-width: 1px;
