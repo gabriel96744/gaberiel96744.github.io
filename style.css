@@ -1,8 +1,7 @@
 
 body{
      background-image: url(light-pollution-city-lights.jpg);
-     background-size: cover;
-     background-repeat: no-repeat;
+     background-size:100vw 100vh;   
 }
 #room1{
      
