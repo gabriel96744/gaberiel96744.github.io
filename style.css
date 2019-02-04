@@ -2,7 +2,11 @@
   display: grid;
   grid-template-columns: auto auto;
 }
-
+.boi{
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
 body{
      background-image: url(light-pollution-city-lights.jpg);
      background-size: cover;
