@@ -1,3 +1,8 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 body{
      background-image: url(light-pollution-city-lights.jpg);
      background-size: cover;
@@ -12,7 +17,7 @@ body{
      width: 35vw;
      height: 30vh;
      background-image: url(kinako-chichi-dango.jpg);
-     margin-left:2%;
+    
      
 }
 #head{
@@ -44,8 +49,7 @@ body{
      width: 35vw;
      height:29vh;
      background-image: url(katakuriko-chichi-dango.jpg);
-     margin-left:40%;
-     margin-top:-24.5%;
+    
    
 }
 #foodDesc1{
@@ -73,8 +77,7 @@ body{
           width: 35vw;
           height: 30vh;
           background-image: url(udon.jpg);
-          margin-left:-110%;
-         margin-top:30%;
+        
      }
      #statusbar3{
           font-weight: bold;
@@ -89,8 +92,7 @@ body{
           width: 35vw;
           height:30vh;
           background-image: url(ramen.jpg);
-          margin-left: 105%;
-          margin-top: -29%;
+          
      }
      #statusbar4{
           font-weight: bold;
@@ -104,8 +106,7 @@ body{
           width: 35vw;
           height: 30vh;
           background-image: url(tonkatsu.jpg);
-         margin-left:-110%;
-         margin-top:19.2%;
+       
      }
      #statusbar5{
           font-weight: bold;
@@ -120,8 +121,6 @@ body{
           width: 35vw;
           height:30vh;
           background-image: url(Katsu-Curry.jpg);
-          margin-top:-20%;
-          margin-left:105%;
         
 
      }
