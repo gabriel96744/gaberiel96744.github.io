@@ -10,9 +10,10 @@ body{
      padding:10px;
      border-width: 1px;
      border-radius: 25px;
-     width: 35vw;
-     height: 30vh;
+     width:25vw;
+     height: 35vh;
      background-image: url(kinako-chichi-dango.jpg);
+     background-size:"cover";
     float:left;
      
 }
@@ -42,9 +43,10 @@ body{
      padding:15px;
      border-width: 1px;
      border-radius: 25px;
-     width: 35vw;
-     height:29vh;
+      width:25vw;
+     height: 35vh;
      background-image: url(katakuriko-chichi-dango.jpg);
+     background-size:"cover";
      float:left;
    
 }
@@ -70,9 +72,10 @@ body{
           padding:15px;
           border-width: 1px;
           border-radius: 25px;
-          width: 35vw;
-          height: 30vh;
+         width:25vw;
+     height: 35vh;
           background-image: url(udon.jpg);
+          background-size:"cover";
          float:left;
      }
      #statusbar3{
@@ -85,9 +88,10 @@ body{
           padding:15px;
           border-width: 1px;
           border-radius: 25px;
-          width: 35vw;
-          height:30vh;
+          width:25vw;
+     height: 35vh;
           background-image: url(ramen.jpg);
+          background-size:"cover";
            float:left;
      }
      #statusbar4{
@@ -99,10 +103,11 @@ body{
           padding:15px;
           border-width: 1px;
           border-radius: 25px;
-          width: 35vw;
-          height: 30vh;
+           width:25vw;
+     height: 35vh;
           background-image: url(tonkatsu.jpg);
         float:left;
+          background-size:"cover";
      }
      #statusbar5{
           font-weight: bold;
@@ -114,9 +119,10 @@ body{
           padding:15px;
           border-width: 1px;
           border-radius: 25px;
-          width: 35vw;
-          height:30vh;
+           width:25vw;
+     height: 35vh;
           background-image: url(Katsu-Curry.jpg);
+          background-size:"cover";
          float:left;
 
      }
