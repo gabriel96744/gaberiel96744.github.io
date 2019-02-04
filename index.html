@@ -1,26 +1,182 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
 
-<head>
-    <style>
 
-    </style>
+
+<head>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+
+  <style>
+
+  </style>
+
 </head>
 
+
+
 <body>
-    <script>
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function(){
-            if(this.readystate == 4 && this.status == 200){
-                var mydata = JSON.parse(this.responseText);
-                window.alert(mydata.bento[1].ingredients[3]);
+
+  <div class="navbar">
+
+    <table width="100%" height="1%">
+
+      <tr>
+
+        <h1 id="head">Welcome to Alucard</h1>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+  <div id="room1" class="boi">
+
+    <h1 id="fooditem1">Food 1</h1>
+
+    <p id="foodPrice1"></p>
+
+    <p id="foodDesc1"></p>
+    <select id="quant1">
+    <option value="" id="foodName1" disabled selected>Quantity</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+    <button onclick="addfoodrm1()" id="button1">Add food</button>
+    <div id="alert">
+
+      <p id="statusbar1"></p>
+
+    </div>
 
 
-            }
-        };
-        xmlhttp.open("GET","sample2.json",true);
-        xmlhttp.send();
-    </script>
+
+  </div>
+
+  <div id="room2" >
+    <h1 id="fooditem2">Food 2</h1>
+
+    <p id="foodPrice2"></p>
+
+    <p id="foodDesc2"></p>
+    <select id="quant2">
+    <option value="" id="foodName2" disabled selected>Quantity</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+    <button onclick="addfoodrm2()" id="button2">Add food</button>
+    <div id="alert">
+
+      <p id="statusbar2"></p>
+  </div>
+
+  <div id="room3" >
+      <h1 id="fooditem3">Food 3</h1>
+
+      <p id="foodPrice3"></p>
+  
+      <p id="foodDesc3"></p>
+      <select id="quant3">
+      <option value="" id="foodName3" disabled selected>Quantity</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+      <button onclick="addfoodrm3()" id="button3">Add food</button>
+      <div id="alert">
+  
+        <p id="statusbar3"></p>
+  
+    </div>
+  <div id="room4" >
+      <h1 id="fooditem4">Food 4</h1>
+
+      <p id="foodPrice4"></p>
+  
+      <p id="foodDesc4"></p>
+      <select id="quant4">
+      <option value="" id="foodName4" disabled selected>Quantity</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+      <button onclick="addfoodrm4()" id="button4">Add food</button>
+      <div id="alert">
+  
+        <p id="statusbar4"></p>
+  
+  </div>
+
+  <div id="room5" >
+      <h1 id="fooditem5">Food 5</h1>
+
+      <p id="foodPrice5"></p>
+  
+      <p id="foodDesc5"></p>
+      <select id="quant5">
+      <option value="" id="foodName5" disabled selected>Quantity</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+      <button onclick="addfoodrm5()" id="button5">Add food</button>
+      <div id="alert">
+  
+        <p id="statusbar5"></p>
+  
+  </div>
+
+  <div id="room6" >
+      <h1 id="fooditem6">Food 6</h1>
+
+      <p id="foodPrice6"></p>
+  
+      <p id="foodDesc6"></p>
+      <select id="quant6">
+      <option value="" id="foodName6" disabled selected>Quantity</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+    </select>
+      <button onclick="addfoodrm6()" id="button6">Add food</button>
+      <div id="alert">
+  
+        <p id="statusbar6"></p>
+  
+  </div>
+
+<button onclick="done()">checkout</button>
+
+
+
+  
+
+  <!-- comments pertaining to HTML will by in js because html comments
+
+are painful to use -->
+
+
+
+  <script src="main.js"></script>
+
+  <!-- script is to be the LAST thing in the body -->
+
 </body>
+
+
 
 </html>

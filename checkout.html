@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    #last{
+        border-color:black;
+        border-width: 20px;
+        border-radius: 25%;
+    }
+    </style>
+</head>
+<body><div id="last">
+        <h1>This is checkout</h1>
+    <h1 id="subtotal"></h1>
+    <h1>You have bought</h1>
+    <h1 id="kinako">    </h1>
+    <h1 id="katakuriko"></h1>
+    <h1 id="udon"></h1>
+    <h1 id="ramen"></h1>
+    <h1 id="ton-katsu"></h1>
+    <h1 id="katsu-curry"></h1>
+    <h1 id="yeet"></h1>
+        <h2 id="tip">tip?</h1><input type="number" id="tip1" placeholder="Tip?">
+    <button onclick="done()">Done</button>
+    </div>
+    <script>
+        var A = sessionStorage.getItem('a1');
+        var Q = sessionStorage.getItem('kinako');
+        var B = parseInt(A);
+        var C = B.toFixed(2);
+        document.getElementById('kinako').innerHTML = "$" + C + ":" + "X" + Q  + " "+ "kinako mochi";
+
+        var A1 = sessionStorage.getItem('a2');
+        var Q1 = sessionStorage.getItem('katakuriko');
+        var B1 = parseInt(A1);
+        var C1 = B1.toFixed(2);
+        document.getElementById('katakuriko').innerHTML = "$" + C1 + ":" + "X" + Q1  + " "+ "katakuriko mochi";
+
+        var A2 = sessionStorage.getItem('a3');
+        var Q2 = sessionStorage.getItem('udon');
+        var B2 = parseInt(A2);
+        var C2 = B2.toFixed(2);
+        document.getElementById('udon').innerHTML = "$" + C2 + ":" + "X" + Q2  + " "+ "udon";
+
+        var A3 = sessionStorage.getItem('a4');
+        var Q3 = sessionStorage.getItem('ramen');
+        var B3 = parseInt(A3);
+        var C3 = B3.toFixed(2);
+        document.getElementById('udon').innerHTML = "$" + C3 + ":" + "X" + Q3  + " "+ "ramen";
+
+        var A4 = sessionStorage.getItem('a5');
+        var Q4 = sessionStorage.getItem('Ton-katsu');
+        var B4 = parseInt(A4);
+        var C4 = B4.toFixed(2);
+        document.getElementById('ton-katsu').innerHTML = "$" + C4 + ":" + "X" + Q4  + " "+ "ton-katsu";
+
+        var A5 = sessionStorage.getItem('a6');
+        var Q5 = sessionStorage.getItem('Chicken-Katsu-Curry');
+        var B5 = parseInt(A5);
+        var C5 = B5.toFixed(2);
+        document.getElementById('katsu-curry').innerHTML = "$" + C5 + ":" + "X" + Q5  + " "+ "katsu-curry";
+    var tax  = 0.04712;
+    var x = sessionStorage.getItem('total');
+    var nein  = parseInt(x);
+    var sub = nein * tax;
+    var subtotal = nein + sub; 
+    document.getElementById('subtotal').innerHTML = "your subtotal is " +"$"+ subtotal.toFixed(2);
+    function done(){
+        var tip = document.getElementById('tip1').value;
+        var opt  = parseInt(tip);
+    var total = subtotal + opt;
+    //var finalTotal = parseInt(total).toFixed(2);
+   document.getElementById('yeet').innerHTML = 'Your total is ' +"$"+ total.toFixed(2);
+   document.getElementById('tip1').innerHTML = " ";
+    }
+    </script>
+</body>
+
+</html>
