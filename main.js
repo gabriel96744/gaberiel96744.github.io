@@ -74,7 +74,9 @@ function addfoodrm2() {
   //var food = Menu1Name
 
   var q2 = $.getElementById('quant2').value;
-
+q2.isNaN(){
+  return=0;}
+  
   var c = Mydata.price2;
 
   var subtotal2 = q2 * c;
@@ -95,7 +97,7 @@ function addfoodrm3() {
   //var food = Menu1Name
 
   var q2 = $.getElementById('quant3').value;
-
+q2.isNaN(){return=0}
   var c = Mydata.price3;
 
   var subtotal2 = q2 * c;
@@ -116,7 +118,7 @@ function addfoodrm4() {
   //var food = Menu1Name
 
   var q2 = $.getElementById('quant4').value;
-
+q2.isNaN(){return=0}
   var c = Mydata.price4;
 
   var subtotal2 = q2 * c;
@@ -137,7 +139,7 @@ function addfoodrm5() {
   //var food = Menu1Name
 
   var q2 = $.getElementById('quant5').value;
-
+q2.isNaN(){return=0}
   var c = Mydata.price5;
 
   var subtotal2 = q2 * c;
@@ -158,7 +160,7 @@ function addfoodrm6() {
   //var food = Menu1Name
 
   var q2 = $.getElementById('quant6').value;
-
+q2.isNaN(){return=0}
   var c = Mydata.price6;
 
   var subtotal2 = q2 * c;
