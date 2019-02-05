@@ -50,6 +50,8 @@ function addfoodrm1() {
   //var food = Menu1Name
 
   var q1 = $.getElementById('quant1').value;
+ q1.isNaN(){
+   return=0;}
 
   var c = Mydata.price1;
 
