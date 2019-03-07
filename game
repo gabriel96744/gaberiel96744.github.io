@@ -1,0 +1,91 @@
+
+<html>
+  <head>
+      <style>
+      body{
+          background-color:white;
+          overflow: hidden;
+      }
+      </style>
+  <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <script>
+    var w = window.innerWidth;
+        var h = window.innerHeight;
+    var ball = new ball();
+    var ballTwo = new ballTwo();
+    var d;
+    function preload(){
+      img = loadImage('pacman.svg.png');
+    }
+      function setup(){
+        createCanvas(w,h);
+      }
+      function draw(){
+        background('white');
+        ball.show();
+        ball.move();
+        ballTwo.show();
+        ballTwo.move();
+        ballTwo.contact()
+      }
+      function ball(){
+       
+        this.x = 100;
+        this.y = 100;
+        userWidth = 50;
+        var speed = 10;
+        this.show = function(){
+        //fill(color('red'));
+        image(img,this.x,this.y,userWidth,userWidth);
+        }
+        this.move = function(){
+          if((keyIsDown(87))&&(this.y > 0)){
+            this.y -= speed;
+          }
+          if((keyIsDown(83))&&(this.y < h - userWidth)){
+            this.y += speed;
+          }
+          if((keyIsDown(65))&&(this.x > 0)){
+            this.x -= speed;
+          }
+          if((keyIsDown(68))&&(this.x < w - userWidth)){
+            this.x += speed;
+          }
+        }
+      }
+      function ballTwo(){
+        this.x = 200;
+        this.y = 200;
+        userWidth = 50;
+        var speed  = 10;
+        this.show = function(){
+            fill(color('blue'));
+            image(pacman.png,this.x,this.y,userWidth,userWidth);
+        }
+        this.move = function(){
+            if((keyIsDown(73))&&(this.y > 0)){
+                this.y -= speed;
+            }
+            if((keyIsDown(75))&&(this.y < h - userWidth)){
+                this.y += speed;
+            }
+            if((keyIsDown(74))&&(this.x > 0)){
+            this.x -= speed;
+          }
+          if((keyIsDown(76))&&(this.x < w - userWidth)){
+            this.x += speed;
+          }
+        }
+        this.contact = function(){
+            d= dist(this.x,this.y,ball.x,ball.y);
+            if(d < 40){
+                noLoop();
+                window.alert('Game Over');
+            }
+        }
+      }
+    </script>
+  </body>
+</html>
