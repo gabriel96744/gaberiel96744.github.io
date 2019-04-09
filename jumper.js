@@ -2,12 +2,15 @@
       function jumper(){
         this.x = 50;
         this.y = 50;
+        this.width = 50;
+        this.height = 50;
         this.gravity = 0.5; //the force of gravity
         this.lift = -10;//this is the opposing force
         this.velocity = 0; //speed of gravity
         this.show = function(){
-          fill(color('red'));
-          ellipse(this.x,this.y,50,50);
+          
+          image(img,this.x,this.y,50,50);
+          imageMode('center');
         }
         this.up = function(){
           this.velocity += this.lift;

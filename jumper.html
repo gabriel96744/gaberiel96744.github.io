@@ -23,9 +23,13 @@
     var hit = false;
     var hitOne = false;
     let img;
+    let img1;
+    function preload(){
+      img = loadImage('Genji_Profile_Picture.png');
+          img1 = loadImage('Ana_Spray_-_Grenade.png');
+    }
       function setup(){
         createCanvas(w,h);
-        img = loadImage('Genji_Profile_Picture.png');
       
       }
       function draw(){
@@ -36,12 +40,12 @@
         barrier.show();
         barrier.update();
         platform.show();
-        hit = collideRectCircle(barrier.x,barrier.y,barrier.width-25,barrier.height-25,jumper.x,jumper.y,25);
+        hit = collideRectRect(barrier.x,barrier.y,barrier.width,barrier.height,jumper.x,jumper.y,jumper.width,jumper.height);
         if(hit === true){
           noLoop();
           
         }
-        hitOne = collideRectCircle(platform.x,platform.y,100,100,jumper.x,jumper.y,50);
+        hitOne = collideRectRect(platform.x,platform.y,100,100,jumper.x,jumper.y,jumper.width,jumper.height);
         if(hitOne === true){
           jumper.up();
         }
