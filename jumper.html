@@ -3,6 +3,7 @@
     <style>
       body{
         background-image:"Temple_of_Anubis_003.jpg";
+        background-size:cover;
         overflow:hidden;
         margin:0;
         padding:0;
@@ -16,6 +17,7 @@
   </head>
   <body>
     <script>
+    var bar = 0;
     var w = window.innerWidth;
     var h = window.innerHeight;
     var jumper = new jumper();
@@ -23,12 +25,15 @@
     var platform = new platform();
     var hit = false;
     var hitOne = false;
+    var hitTwo = false;
     let img1;
     let img;
+    let img2;
+    var points = 0;
     function preload(){
       img = loadImage('Genji_Profile_Picture.png');
       img1 = loadImage('Ana_Spray_-_Grenade.png');
-    
+      img2 = loadImage('health-300x300.png');
       
     }
       function setup(){
@@ -51,6 +56,12 @@
         hitOne = collideRectCircle(platform.x,platform.y,100,100,jumper.x,jumper.y,50);
         if(hitOne === true){
           jumper.up();
+        }
+        hitTwo = collideRectRect(health.x,health.y,health.width,health.height,jumper.x,jumper.y,jumper.width,jumper.height);
+        if(hitTwo === true){
+          points += 100;
+          bar == 0;
+          
         }
       }
     </script>
