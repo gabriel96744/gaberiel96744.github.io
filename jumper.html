@@ -2,6 +2,7 @@
   <head>
     <style>
       body{
+        background-image:"Temple_of_Anubis_003.jpg";
         overflow:hidden;
         margin:0;
         padding:0;
@@ -22,30 +23,32 @@
     var platform = new platform();
     var hit = false;
     var hitOne = false;
-    let img;
     let img1;
+    let img;
     function preload(){
       img = loadImage('Genji_Profile_Picture.png');
-          img1 = loadImage('Ana_Spray_-_Grenade.png');
+      img1 = loadImage('Ana_Spray_-_Grenade.png');
+    
+      
     }
       function setup(){
         createCanvas(w,h);
       
       }
       function draw(){
-        background(0);
+        background(255);
         jumper.show();
         jumper.update();
         jumper.move();
         barrier.show();
         barrier.update();
         platform.show();
-        hit = collideRectRect(barrier.x,barrier.y,barrier.width,barrier.height,jumper.x,jumper.y,jumper.width,jumper.height);
+        hit = collideRectCircle(barrier.x,barrier.y,barrier.width-25,barrier.height-25,jumper.x,jumper.y,25);
         if(hit === true){
           noLoop();
           
         }
-        hitOne = collideRectRect(platform.x,platform.y,100,100,jumper.x,jumper.y,jumper.width,jumper.height);
+        hitOne = collideRectCircle(platform.x,platform.y,100,100,jumper.x,jumper.y,50);
         if(hitOne === true){
           jumper.up();
         }

@@ -8,7 +8,7 @@ function barrier(){
   this.show = function(){
     this.x;
     this.y;
-  image(img1,this.x, this.y, this.width,this.height);
+    image(img1,this.x, this.y, this.width,this.height);
     imageMode('center');
   }
   this.update = function(){
