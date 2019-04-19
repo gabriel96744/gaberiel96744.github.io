@@ -3,6 +3,7 @@
     <style>
       body{
         background-image: url('Temple_of_Anubis_003.jpg');
+        background-size: cover;
         overflow:hidden;
         margin:0;
         padding:0;
@@ -36,6 +37,7 @@
     let img;
     let img2;
     var points = 0;
+    var audio = new Audio('Genji - MADA MADA.mp3');
     function preload(){
       img = loadImage('Genji_Profile_Picture.png');
       img1 = loadImage('Ana_Spray_-_Grenade.png');
@@ -59,6 +61,7 @@
         if(hit === true){
           noLoop();
           location.href = "dead.html";
+          audio.play();
           
         }
         hitOne = collideRectCircle(platform.x,platform.y,100,100,jumper.x,jumper.y,50);
