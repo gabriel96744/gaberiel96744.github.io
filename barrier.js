@@ -15,9 +15,12 @@ function barrier(){
     this.velocity += this.leftPull;
     this.x -= this.velocity;
     if(this.x < 0 - this.width){
+      bar += 1;
       this.velocity = 0;
       this.y = Math.floor((Math.random()*h)-100);
   this.x = w + this.width;
+  points += 100;
+  document.getElementById("score").innerHTML = "score: " + points;
     }
   }
   

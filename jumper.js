@@ -41,4 +41,7 @@
         if(keyCode === 32){
           jumper.up();
         }
+        if(keyCode === 82){
+          window.location.reload(false);
+        }
       }
