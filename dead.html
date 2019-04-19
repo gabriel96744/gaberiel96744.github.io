@@ -1,11 +1,35 @@
 <html>
 <head>
+    <script src="p5.min.js"></script>
+  <style>
+  body{
+    background-color:black;
+    color:white;
+  }
+  h1{
+    padding-top: 10vh;
+    text-align: center;
+  }
+  h2{
+    padding-top: 5vh;
+    font-weight:bold;
+    text-align: center;
+  }
+  </style>
   
 </head>
   <body>
-    <h1 id="dead"></h1>
+    <h1 id="dead">You Died Lmao</h1>
+    <h2>Press Enter to return to game</h2>
     <script>
-      
+      function setup(){
+
+      }
+      function keyPressed(){
+        if(keyCode === 13){
+                  location.href = "jumper.html";
+              }
+      }
     </script>
   </body>
 </html>
