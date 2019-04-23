@@ -22,7 +22,7 @@ function draw(){
   var locY = mouseY - height /2;
   //directionalLight(red,green,blue,x-axis,y-axis,z-axis);
   //pointLight(r,g,b,x,y,z) center of screen is 0,0 ; top left is -w/2,-h/2; top right is w/2,-h/2; bottom left -w/2,h/2; bottom right is w/2,h/2;
- pointLight(255,255,255,width,height);
+ directionalLight(255,255,255,locX,locY,-175);
   specularMaterial(255);
   noStroke();
   texture(img);
