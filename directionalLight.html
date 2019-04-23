@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+<body>
+  <script>
+    function setup(){
+  createCanvas(500,500,WEBGL)
+}
+function draw(){
+  background(255);
+  var locX = mouseX - width/2;
+  var locy = mouseY - height/2;
+  directionalLight(250,0,0,-locX,-locY,175);
+  specularMaterial(255);
+  noStroke();
+  sphere(175);
+  
+}
+  </script>
+</body>
+</html>
+
