@@ -30,6 +30,12 @@ function draw(){
   torus(200,64,512,512);//torus(radius of ring, the radius,detailx,detaily)
   
 }
+    function keyPresed(){
+      if(keyCode === "32"){
+        var fs = fullscreen();
+        fullscreen(!fs);
+      }
+    }
   </script>
 </body>
 </html>
