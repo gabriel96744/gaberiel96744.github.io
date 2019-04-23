@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <style>
+      body{
+        overflow:hidden;
+      }
+    </style>
+  </head>
+<body>
+  <script>
+    function setup(){
+  createCanvas(window.innerWidth,window.innerHeight,WEBGL);
+}
+function draw(){
+  background(255);
+  var locX = mouseX - width /2;
+  var locY = mouseY - height /2;
+  //directionalLight(red,green,blue,x-axis,y-axis,z-axis);
+  //pointLight(r,g,b,x,y,z) center of screen is 0,0 ; top left is -w/2,-h/2; top right is w/2,-h/2; bottom left -w/2,h/2; bottom right is w/2,h/2;
+  pointLight(255,255,255,width,height);
+  specularMaterial(255);
+  noStroke();
+  // translate moves from center;
+  sphere(200);
+  
+}
+  </script>
+</body>
+</html>
