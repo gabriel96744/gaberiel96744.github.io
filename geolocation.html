@@ -9,7 +9,6 @@
     <p id="long"></p>
     <script>
      function setup(){
-       	getCurrentPosition(doThisOnLocation);
 	if(geoCheck() == true){
 		document.getElementById('geo').innerHtml = "geolocation avalible";
 		//geolocation is available
@@ -17,7 +16,7 @@
 	  	document.getElementById('geo').innerHtml = "geolocation not avalible";
 		//error getting geolocaion
 	}
-
+	getCurrentPosition(doThisOnLocation);
 }
 function doThisOnLocation(position){
    document.getElementById('lat').innerHtml="lat: " + position.latitude.toFixed(4);
