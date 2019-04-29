@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <script src="p5.geolocation.js"></script>
+  </head>
+  <body>
+    <p id="geo"></p>
+    <p id="lat"></p>
+    <p id="long"></p>
+    <script>
+     function setup(){
+       	getCurrentPosition(doThisOnLocation);
+	if(geoCheck() == true){
+		document.getElementById('geo').innerHtml = "geolocation avalible";
+		//geolocation is available
+	}else{
+	  	document.getElementById('geo').innerHtml = "geolocation not avalible";
+		//error getting geolocaion
+	}
+
+}
+function doThisOnLocation(position){
+   document.getElementById('lat').innerHtml="lat: " + position.latitude.toFixed(4);
+    document.getElementById('long').innerHtml="long: " + position.longitude.toFixed(4);
+}
+    </script>
+  </body>
+</html>
