@@ -18,8 +18,7 @@
      function setup(){
 	if(geoCheck() == true){
 		$.getElementById('geo').innerHtml = "Ready";
-		//geolocation is available
-  distance = calcGeoDistance(mylat,mylong , treasurelat, treasurelong, 'mi');//not done
+		//geolocation is available//not done
 	}else{
 	  $.getElementById('geo').innerHtml = "Must have GPS enabled";
 		//error getting geolocaion
@@ -29,6 +28,7 @@
 function positionPing(position){
   mylat = postition.latitude;
   mylong = postition.longitude;
+	distance = calcGeoDistance(mylat,mylong , treasurelat, treasurelong, 'mi');
   $.getElementById('distance').innerHTML = distance;
 }
 
