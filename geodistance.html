@@ -27,8 +27,8 @@
 	intervalCurrentPosition(positionPing,1000);
 }
 function positionPing(position){
-  mylat = postition.latitude;
-  mylong = postition.longitude;
+  mylat = position.latitude;
+  mylong = position.longitude;
   distance = calcGeoDistance(mylat,mylong , treasurelat, treasurelong, 'mi');
   $.getElementById('distance').innerHTML = distance.toFixed(2);
   if(distance < 0.05){
