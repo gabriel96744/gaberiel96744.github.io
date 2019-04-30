@@ -29,11 +29,14 @@
 function positionPing(position){
   mylat = position.latitude;
   mylong = position.longitude;
-  distance = calcGeoDistance(mylat,mylong , treasurelat, treasurelong, 'mi');
-  $.getElementById('distance').innerHTML = distance.toFixed(2);
-  if(distance < 0.05){
+  distance = calcGeoDistance(mylat,mylong ,21.311285, -157.837918, 'mi');
+  $.getElementById('distance').innerHTML = distance.toFixed(5);
+  if(distance < 0.001){
     $.getElementById('geo').innerHTML = "YOU FOUND THE TREASURE";
   }
+	else{
+		 $.getElementById('geo').innerHTML = "";
+	}
 }
 
     </script>
