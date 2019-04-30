@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+    <script src="p5.geolocation.js"></script>
+  </head>
+  <body>
+    <p id="geo"></p>
+    <p id="lat"></p>
+    <p id="long"></p>
+    <h1 id="distance"></h1>
+    <script>
+    var $ = document;
+    var distance;
+    var mylat;
+    var mylong;
+    var treasuelat = 21.310222;
+    var treasuerelong = -157.837545;
+     function setup(){
+	if(geoCheck() == true){
+		$.getElementById('geo').innerHtml = "Ready";
+		//geolocation is available
+  distance = calcGeoDistance(mylat,mylong , treasurelat, treasurelong, 'mi');//not done
+	}else{
+	  $.getElementById('geo').innerHtml = "Must have GPS enabled";
+		//error getting geolocaion
+	}
+	intervalCurrentPosition(positionPing,1000);
+}
+function positionPing(position){
+  mylat = postition.latitude;
+  mylong = postition.longitude;
+  $.getElementById('distance').innerHTML = distance;
+}
+
+    </script>
+  </body>
+</html>
