@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+<body>
+  <h1 id="ax"></h1>
+  <script>
+  var aexel;
+  function setup(){
+    createCanvas(window.innerWidth,window.innerHeight);
+  }
+    function draw(){
+      ax = accelerationX;
+      document.getElementById('aexel').innerHTML = ax;
+    }
+  </script>
+</body>
+</html>
