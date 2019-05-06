@@ -6,7 +6,7 @@
   <h1 id="ax"></h1>
   <h1 id="rx"></h1>
   <script>
-  var aexel;
+  var ax;
     var axHigh;
     
     var rx;
@@ -15,9 +15,9 @@
   }
     function draw(){
       aexel = accelerationX;
-      if (aexel > axHigh){
-        axHigh = aexel;
-      document.getElementById('aexel').innerHTML = "X Accel = " +  axHigh;
+      if (ax > axHigh){
+        axHigh = ax;
+      document.getElementById('ax').innerHTML = "X Accel = " +  axHigh;
     }
       rx = rotationX;
       document.getElementById('rx').innerHTML = "rotation X = " + rx;
