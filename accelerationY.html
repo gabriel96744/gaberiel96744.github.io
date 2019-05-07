@@ -1,5 +1,9 @@
 <html>
   <head>
+    <style>
+      body{
+        background-color:white;
+      }
     <script src="p5.min.js"></script>
   </head>
   <body>
@@ -13,7 +17,7 @@
         ay = accelerationY;
         document.getElementById('yo').innerHTML = "acceleration Y = " + ay;
         if (ay > 1){
-          window.alert("someone picked up your phone");
+          style.background-color('red');
         }
       }
     </script>
