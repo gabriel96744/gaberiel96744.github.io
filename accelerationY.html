@@ -13,24 +13,33 @@
     <h1 id="ry"></h1>
     <h1 id="rz"></h1>
     <script>
-      var rz = 0;
-      var rx = 0;
-      var ry = 0;
+      var rz;
+      var rx;
+      var ry;
+      var defz;
+      var defx;
+      var defy;
       var ay;
       function setup(){
         createCanvas(window.innerHeight,Window.innerWidth);
+        defz = rotationZ;
+        defx = rotationX;
+        defy = rotationY;
       }
       function draw(){
-        rz = rotationZ;
-        rx = rotationX;
-        ry = rotationY;
+        rz = rotationZ; //0-360 0 is magnetic north
+        rx = rotationX; //flip over the X axis end over end
+        ry = rotationY; // flip side to side;
         ay = accelerationY;
         document.getElementById('yo').innerHTML = "acceleration Y = " + ay;
         document.getElementById('rx').innerHTML = "rotaion X = " + rx;
-        document.getElementById('ry').innerHTML = "rotaion X = " + ry;
-        document.getElementById('rz').innerHTML = "rotaion X = " + rz;
+        document.getElementById('ry').innerHTML = "rotaion Y = " + ry;
+        document.getElementById('rz').innerHTML = "rotaion Z = " + rz;
         if (ay > 1){
           document.body.style.backgroundColor="red";
+        }
+        if(ay < 1){
+          document.body.style.backgroundColor = "white";
         }
       }
     </script>
