@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script src="p5.min.js"></script>
+  </head>
+  <body>
+    <h1 id="yo"></h1>
+    <script>
+      var ay;
+      function setup(){
+        createCanvas(window.innerHeight,Window.innerWidth);
+      }
+      function draw(){
+        ay = accelerationY;
+        document.getElementById('yo').innerHTML = "acceleratyion Y = " + ay;
+        if (ay > 0.1){
+          window.alert("someone picked up your phone");
+        }
+      }
+    </script>
+  </body>
+</html>
