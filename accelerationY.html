@@ -31,10 +31,10 @@
         rx = rotationX; //flip over the X axis end over end
         ry = rotationY; // flip side to side;
         ay = accelerationY;
-        document.getElementById('yo').innerHTML = "acceleration Y = " + ay;
-        document.getElementById('rx').innerHTML = "rotaion X = " + rx;
-        document.getElementById('ry').innerHTML = "rotaion Y = " + ry;
-        document.getElementById('rz').innerHTML = "rotaion Z = " + rz;
+        document.getElementById('yo').innerHTML = "acceleration Y = " + ay.toFixed(2);
+        document.getElementById('rx').innerHTML = "rotaion X = " + rx.toFixed(2);
+        document.getElementById('ry').innerHTML = "rotaion Y = " + ry.toFixed(2);
+        document.getElementById('rz').innerHTML = "rotaion Z = " + rz.toFixed(2);
         if (ay > 0.5){
           document.body.style.backgroundColor="red";
           noloop();
