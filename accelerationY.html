@@ -9,14 +9,26 @@
   </head>
   <body>
     <h1 id="yo"></h1>
+    <h1 id="rx"></h1>
+    <h1 id="ry"></h1>
+    <h1 id="rz"></h1>
     <script>
+      var rz = 0;
+      var rx = 0;
+      var ry = 0;
       var ay;
       function setup(){
         createCanvas(window.innerHeight,Window.innerWidth);
       }
       function draw(){
+        rz = rotationZ;
+        rx = rotationX;
+        ry = rotationY;
         ay = accelerationY;
         document.getElementById('yo').innerHTML = "acceleration Y = " + ay;
+        document.getElementById('rx').innerHTML = "rotaion X = " + rx;
+        document.getElementById('ry').innerHTML = "rotaion X = " + ry;
+        document.getElementById('rz').innerHTML = "rotaion X = " + rz;
         if (ay > 1){
           document.body.style.backgroundColor="red";
         }
